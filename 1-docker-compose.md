@@ -46,8 +46,34 @@ docker compose up -d <nombre servicio>
 docker compose ps
 ```
 ### COMPLETAR CON UNA CAPTURA DE PANTALLA DEL LISTADO DE LOS CONTENEDORES EN EJECUCIÓN
+```
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software>docker compose up -d
+time="2025-10-25T21:07:26-05:00" level=warning msg="C:\\Users\\ASUS TUF F15\\Desktop\\Epn\\6\\Construcción de Software\\compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Running 3/3
+ ✔ Network construccindesoftware_net-wp  Created                                                                   0.1s
+ ✔ Container mysql-container             Healthy                                                                   5.9s
+ ✔ Container wordpress-container         Started                                                                   6.1s
 
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software>docker compose ps
+time="2025-10-25T21:08:12-05:00" level=warning msg="C:\\Users\\ASUS TUF F15\\Desktop\\Epn\\6\\Construcción de Software\\compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+NAME                  IMAGE         COMMAND                  SERVICE             CREATED          STATUS                    PORTS
+mysql-container       mysql:8.4     "docker-entrypoint.s…"   mysql-service       46 seconds ago   Up 45 seconds (healthy)   3306/tcp, 33060/tcp
+wordpress-container   wordpress:6   "docker-entrypoint.s…"   wordpress-service   46 seconds ago   Up 39 seconds (healthy)   0.0.0.0:8081->80/tcp, [::]:8081->80/tcp
+```
 ### Detener y eliminar los contenedores definidos en el archivo
 ```
 docker compose down
+```
+
+```
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software>docker compose down
+time="2025-10-25T21:10:18-05:00" level=warning msg="C:\\Users\\ASUS TUF F15\\Desktop\\Epn\\6\\Construcción de Software\\compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[+] Running 3/3
+ ✔ Container wordpress-container         Removed                                                                   1.2s
+ ✔ Container mysql-container             Removed                                                                   1.2s
+ ✔ Network construccindesoftware_net-wp  Removed                                                                   0.3s
+
+C:\Users\ASUS TUF F15\Desktop\Epn\6\Construcción de Software>docker compose ps
+time="2025-10-25T21:10:28-05:00" level=warning msg="C:\\Users\\ASUS TUF F15\\Desktop\\Epn\\6\\Construcción de Software\\compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+NAME      IMAGE     COMMAND   SERVICE   CREATED   STATUS    PORTS
 ```
